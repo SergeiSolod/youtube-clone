@@ -8,7 +8,7 @@ function App() {
   return (
    <Grid justify='center' container spacing={16}>
        <Grid item sx={12}>
-           <Grid container spacing={16}>
+           <Grid container spacing={10}>
                 <Grid item xs={12}>
                     <SearchBar/>
                 </Grid>
