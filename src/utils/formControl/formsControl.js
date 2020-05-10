@@ -1,21 +1,20 @@
 import React from "react";
+import TextField from '@material-ui/core/TextField'
 
-export const Input = React.memo(({ input, meta, ...props }) => {
-  const hasError = meta.touched && meta.error;
-  return (
-    <div className={hasError ? "div-input-error-true" : "div-input-error"}>
-      {hasError && (
-        <div className="div-error-span">
-          <span className="error-info-message"> {meta.error}</span>
-        </div>
-      )}
-      <div>
-        <input
-          {...input}
-          {...props}
-          className={hasError ? "input-error" : "js-input input "}
+export const Input = ({
+                          label,
+                          input,
+                          meta: {touched, invalid, error},
+                          ...custom
+                      }) => {
+    return (
+        <TextField
+            label={label}
+            placeholder={label}
+            error={touched && invalid}
+            helperText={touched && error}
+            {...input}
+            {...custom}
         />
-      </div>
-    </div>
-  );
-});
+    );
+};
