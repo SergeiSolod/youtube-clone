@@ -4,7 +4,6 @@ import App from "./App";
 import store from "./redux/redux-store";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import "./style.css";
 
 ReactDOM.render(
     <BrowserRouter basename={process.env.REACT_APP_BASE_NAME_URL}>

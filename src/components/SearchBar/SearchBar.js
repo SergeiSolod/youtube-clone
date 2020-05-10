@@ -4,13 +4,9 @@ import {Field, reduxForm} from "redux-form";
 
 const SearchBarForm = (props) => {
     return (
-        <h1>
-            <Paper elevation={6} style={{padding: '25px'}}>
-                <form onSubmit={props.handleSubmit}>
-                    <TextField fullWidth label='Search...' onChange/>
-                </form>
-            </Paper>
-        </h1>
+        <form onSubmit={props.handleSubmit}>
+            <TextField fullWidth label='Search...' onChange/>
+        </form>
     )
 }
 
