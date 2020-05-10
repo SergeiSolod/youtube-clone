@@ -9,7 +9,7 @@ export const headerApi = {
             params: {
                 part: 'snippet',
                 maxResults: 5,
-                key: 'AIzaSyBZhe3_b1PFUXnWbYx3TpLrl5jMIpt1lpc'
+                key: 'AIzaSyDbQuOOlJFokJKe5tFDaI4ncuG1bgCm1cE'
             }
         })
             .then(function (response) {
