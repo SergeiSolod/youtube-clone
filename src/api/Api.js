@@ -1,9 +1,9 @@
 import axios from "axios";
 
 export const Api = {
-    getYouTube(name) {
+    getYouTube(search) {
         return axios({
-            url: `https://www.googleapis.com/youtube/v3/${name}`,
+            url: `https://www.googleapis.com/youtube/v3/${search}`,
             method: "get",
             withCredentials: true,
             params: {
