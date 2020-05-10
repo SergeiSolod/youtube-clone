@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const headerApi = {
+export const Api = {
     getYouTube(name) {
         return axios({
             url: `https://www.googleapis.com/youtube/v3/${name}`,
