@@ -9,6 +9,8 @@ export const Input = ({
                       }) => {
     return (
         <TextField
+            id="outlined-basic"
+            variant="outlined"
             label={label}
             placeholder={label}
             error={touched && invalid}
