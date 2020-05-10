@@ -16,7 +16,6 @@ const SearchBarForm = (props) => {
 
 const SearchBarReduxForm = reduxForm({form: 'Search'})(SearchBarForm)
 
-
 const SearchBar = (props) => {
     const onSubmit = (formData) => {
         console.log(formData)
