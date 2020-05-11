@@ -1,8 +1,11 @@
-import youtube from "./baseurl";
+import axios from 'axios';
 
 export const Api = {
     getYouTube(search) {
-        return youtube.get("search", {
+        return axios({
+            url: `https://www.googleapis.com/youtube/v3/search`,
+            method: "get",
+            withCredentials: true,
             params: {
                 part: "snippet",
                 maxResults: 5,
