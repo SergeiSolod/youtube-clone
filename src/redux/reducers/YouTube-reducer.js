@@ -39,7 +39,16 @@ const setSelectedVideo = selectedVideo => ({
 
 export const setYouTubeThunk = search => async (dispatch, getState) => {
     let data = await Api.getYouTube(search);
-    dispatch(setVideos(data))
+    let videos = [];
+    for (let i = 0; i < 5; i++) {
+       if (data[i].id.videoId !== undefined) {
+           videos.push(data[i]);
+       }
+    }
+
+
+
+    dispatch(setVideos(videos))
     dispatch(setSelectedVideo(data[4]))
 };
 

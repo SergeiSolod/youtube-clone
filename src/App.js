@@ -26,7 +26,7 @@ function App (props) {
                         <VideoDetail selectedVideo={props.selectedVideo}/>
                     </Grid>
                     <Grid item xs={4}>
-                        <VideoList/>
+                        <VideoList videos={props.videos}/>
                     </Grid>
                 </Grid>
             </Grid>

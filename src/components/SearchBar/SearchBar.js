@@ -17,12 +17,11 @@ const SearchBarReduxForm = reduxForm({form: 'Search'})(SearchBarForm)
 
 const SearchBar = (props) => {
     const onSubmit = (formData) => {
-        console.log(formData)
     }
     return (
         <Paper elevation={6} style={{padding: '25px'}}>
             <SearchBarReduxForm onSubmit={onSubmit}/>
-            <Button variant="contained">Default</Button>
+            <Button variant="contained">Поиск</Button>
         </Paper>
     )
 }

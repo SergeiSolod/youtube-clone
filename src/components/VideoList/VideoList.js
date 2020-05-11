@@ -1,10 +1,13 @@
 import React from 'react'
 
-const VideoList = () => {
+import {Grid} from '@material-ui/core'
+
+const VideoList = (props) => {
     return (
-        <h1>
-            This is a Video List component
-        </h1>
+        <div>
+            {props.videos.map((video, i) => <h1 key={i}>пост {i}</h1> )}
+
+        </div>
     )
 }
 

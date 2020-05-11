@@ -3,7 +3,6 @@ import React from 'react'
 import {Paper, Typography} from '@material-ui/core'
 
 const VideoDetail = (props) => {
-    console.log(props.selectedVideo.id.videoId)
     const videoSrc = `https://www.youtube.com/embed/${props.selectedVideo.id.videoId}`
     return (
         <>
