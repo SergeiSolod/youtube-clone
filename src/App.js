@@ -8,8 +8,12 @@ import {setYouTubeThunk} from "./redux/reducers/YouTube-reducer";
 
 function App (props) {
     useEffect(() => {
-        props.setYouTubeThunk('react')
+        props.setYouTubeThunk('minecraft')
     }, []);
+
+    if (props.loading) {
+        return <div>Loading...</div>
+    }
 
     return (
         <Grid justify='center' container spacing={16}>
@@ -33,7 +37,8 @@ function App (props) {
 let mapStateToProps = state => {
     return {
         videos: state.video.videos,
-        selectedVideo: state.video.selectedVideo
+        selectedVideo: state.video.selectedVideo,
+        loading: state.video.loading
     };
 };
 

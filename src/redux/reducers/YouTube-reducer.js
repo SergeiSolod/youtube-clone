@@ -43,16 +43,16 @@ const setSelectedVideo = selectedVideo => ({
     selectedVideo
 });
 
-const setLoading = status => ({
+const setLoading = loading => ({
     type: SET_LOADING,
-    status
+    loading
 });
 
 export const setYouTubeThunk = search => async (dispatch, getState) => {
     dispatch(setLoading(true))
     let data = await Api.getYouTube(search);
     dispatch(setVideos(data))
-    dispatch(setSelectedVideo(data[0]))
+    dispatch(setSelectedVideo(data[4]))
     dispatch(setLoading(false))
 };
 
