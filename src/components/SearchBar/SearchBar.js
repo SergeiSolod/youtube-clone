@@ -9,6 +9,7 @@ const SearchBarForm = (props) => {
         <form onSubmit={props.handleSubmit}>
             <Field placeholder={'Поиск'} name={'search'} validate={[required]} component={Input}
                    className="form-control-search"/>
+            <button type='submit' className="waves-effect waves-light btn">button</button>
         </form>
     )
 }
@@ -17,11 +18,11 @@ const SearchBarReduxForm = reduxForm({form: 'Search'})(SearchBarForm)
 
 const SearchBar = (props) => {
     const onSubmit = (formData) => {
+        props.setYouTubeThunk(formData)
     }
     return (
         <Paper elevation={6} style={{padding: '25px'}}>
             <SearchBarReduxForm onSubmit={onSubmit}/>
-            <Button variant="contained">Поиск</Button>
         </Paper>
     )
 }

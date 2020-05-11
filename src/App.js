@@ -8,7 +8,7 @@ import {setYouTubeThunk} from "./redux/reducers/YouTube-reducer";
 
 function App (props) {
     useEffect(() => {
-        props.setYouTubeThunk('minecraft')
+        props.setYouTubeThunk('youtube')
     }, []);
 
     if (!props.selectedVideo) {
@@ -20,7 +20,7 @@ function App (props) {
             <Grid item sx={12}>
                 <Grid container spacing={10}>
                     <Grid item xs={12}>
-                        <SearchBar/>
+                        <SearchBar setYouTubeThunk={props.setYouTubeThunk}/>
                     </Grid>
                     <Grid item xs={8}>
                         <VideoDetail selectedVideo={props.selectedVideo}/>
