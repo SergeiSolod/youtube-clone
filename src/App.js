@@ -11,7 +11,7 @@ function App (props) {
         props.setYouTubeThunk('minecraft')
     }, []);
 
-    if (props.loading) {
+    if (!props.selectedVideo) {
         return <div>Loading...</div>
     }
 
