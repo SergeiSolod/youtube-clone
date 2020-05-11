@@ -6,33 +6,34 @@ import VideoList from "./components/VideoList/VideoList";
 import {connect} from "react-redux";
 import {setYouTubeThunk} from "./redux/reducers/YouTube-reducer";
 
-function App(props) {
+function App (props) {
     useEffect(() => {
-       props.setYouTubeThunk('react')
+        props.setYouTubeThunk('react')
     }, []);
 
-  return (
-   <Grid justify='center' container spacing={16}>
-       <Grid item sx={12}>
-           <Grid container spacing={10}>
-                <Grid item xs={12}>
-                    <SearchBar/>
+    return (
+        <Grid justify='center' container spacing={16}>
+            <Grid item sx={12}>
+                <Grid container spacing={10}>
+                    <Grid item xs={12}>
+                        <SearchBar/>
+                    </Grid>
+                    <Grid item xs={8}>
+                        <VideoDetail selectedVideo={props.selectedVideo}/>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <VideoList/>
+                    </Grid>
                 </Grid>
-               <Grid item xs={8}>
-                   <VideoDetail/>
-               </Grid>
-               <Grid item xs={4}>
-                   <VideoList/>
-               </Grid>
-           </Grid>
-       </Grid>
-   </Grid>
-  );
+            </Grid>
+        </Grid>
+    );
 }
 
 let mapStateToProps = state => {
     return {
-    video: state.video
+        videos: state.video.videos,
+        selectedVideo: state.video.selectedVideo
     };
 };
 
