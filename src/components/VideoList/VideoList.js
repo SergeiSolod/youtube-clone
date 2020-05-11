@@ -5,9 +5,9 @@ import VideoItem from "../VideoItem/VideoItem";
 
 const VideoList = (props) => {
     return (
-        <div>
+        <Grid container spacing={10}>
             {props.videos.map((video) => <VideoItem video={video}/> )}
-        </div>
+        </Grid>
     )
 }
 
