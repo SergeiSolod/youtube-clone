@@ -1,17 +1,18 @@
 import produce from "immer";
 import {Api} from "../../api/Api";
 
-export const SET_YOUTUBE = "YouTubeCloe/YouTube-reducer/SET_YOUTUBE";
+export const SET_VIDEO = "YouTubeCloe/YouTube-reducer/SET_VIDEO";
 
 let initialState = {
-    youtube: {}
+    video: [],
+    selectedVideo: null
 };
 
 const YouTubeReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SET_YOUTUBE: {
+        case SET_VIDEO: {
             return produce(state, draft => {
-                draft.youtube = action.youtube;
+                draft.video = action.video;
             });
         }
         default:
@@ -19,9 +20,9 @@ const YouTubeReducer = (state = initialState, action) => {
     }
 }
 
-const setYouTube = youtube => ({
-    type: SET_YOUTUBE,
-    youtube
+const setYouTube = video => ({
+    type: SET_VIDEO,
+    video
 });
 
 export const setYouTubeThunk = search => async (dispatch, getState) => {

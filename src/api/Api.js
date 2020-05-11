@@ -14,7 +14,7 @@ export const Api = {
             }
         })
             .then(function (response) {
-                return response.data;
+                return response.data.items;
             })
             .catch(function (error) {
                 return "error";

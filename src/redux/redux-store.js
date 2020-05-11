@@ -1,8 +1,10 @@
 import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import thunkMiddleware from "redux-thunk";
 import { reducer as formReducer } from "redux-form";
+import YouTubeReducer from "./reducers/YouTube-reducer";
 
 let reducers = combineReducers({
+    video: YouTubeReducer,
     form: formReducer
 });
 

@@ -32,7 +32,7 @@ function App(props) {
 
 let mapStateToProps = state => {
     return {
-
+    video: state.video
     };
 };
 
