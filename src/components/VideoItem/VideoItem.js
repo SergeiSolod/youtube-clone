@@ -2,9 +2,14 @@ import React from 'react'
 
 import {Grid, Paper, Typography} from '@material-ui/core'
 
-const VideoItem = () => {
+const VideoItem = (props) => {
+    console.log(props)
     return (
-        <h1>VideItem</h1>
+      <Grid>
+          <Paper style={{display: 'flex', alignItems: 'center'}}>
+            <img style={{marginRight: '20px'}} alt='thumbnail' src={props.video.snippet.thumbnails.medium.url}/>
+          </Paper>
+      </Grid>
     )
 }
 
