@@ -1,5 +1,5 @@
 import React from 'react'
-import {Paper, TextField} from '@material-ui/core'
+import {Paper, Button} from '@material-ui/core'
 import {Field, reduxForm} from "redux-form";
 import {required} from "../../utils/validators/validators";
 import {Input} from "../../utils/formControl/formsControl";
@@ -22,6 +22,7 @@ const SearchBar = (props) => {
     return (
         <Paper elevation={6} style={{padding: '25px'}}>
             <SearchBarReduxForm onSubmit={onSubmit}/>
+            <Button variant="contained">Default</Button>
         </Paper>
     )
 }
